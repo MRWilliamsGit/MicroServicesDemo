@@ -1,8 +1,8 @@
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
-	pip3 install black
+		pip3 install -r requirements.txt
 
+#testing not set up
 test:
 	python -m pytest -vv test_heythere.py
 
