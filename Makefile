@@ -4,7 +4,7 @@ install:
 
 #testing not set up
 test:
-	python -m pytest -vv test_heythere.py
+	python -m pytest -vv test.py
 
 format:
 	black *.py
