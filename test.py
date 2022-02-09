@@ -1,4 +1,15 @@
-from heythere import add
+from fastapi import FastAPI
+from fastapi.testclient import TestClient
+from heythere import app
 
-def test_add():
-    assert 2 == add(1,1)
+client = TestClient(app)
+
+def test_read_main():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json() == {"message": "Hello There Friend!"}
+
+def test_read_add():
+    response = client.get("/add/2/2")
+    assert response.status_code == 200
+    assert response.json() == {"total": 4}

@@ -8,14 +8,14 @@ async def root():
     return {"message": "Hello There Friend!"}
 
 @app.get("/add/{num1}/{num2}")
-async def add(num1: int, num2: int):
+def add(num1: int, num2: int):
     """Add two numbers together"""
 
     total = num1 + num2
     return {"total": total}
 
 @app.get("/hey/{nm}")
-async def hey(nm: str):
+def hey(nm: str):
     return {"message": "You have a nice name, "&nm&"!"}
 
 if __name__ == '__main__':
