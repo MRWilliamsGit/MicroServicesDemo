@@ -16,7 +16,7 @@ def adder(num1: int, num2: int):
 
 @app.get("/hey/{nm}")
 def hey(nm: str):
-    return {"message": "You have a nice name, "&nm&"!"}
+    return {"message": "You have a nice name, "+nm+"!"}
 
 if __name__ == '__main__':
     uvicorn.run(app, port=8080, host='0.0.0.0')
