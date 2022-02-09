@@ -9,7 +9,7 @@ def test_read_main():
     assert response.status_code == 200
     assert response.json() == {"message": "Hello There Friend!"}
 
-def test_read_add():
-    response = client.get("/add/2/2")
+def test_read_adder():
+    response = client.get("/adder/2/2")
     assert response.status_code == 200
     assert response.json() == {"total": 4}

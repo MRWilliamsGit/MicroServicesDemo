@@ -7,7 +7,7 @@ app = FastAPI()
 async def root():
     return {"message": "Hello There Friend!"}
 
-@app.get("/add/{num1}/{num2}")
+@app.get("/adder/{num1}/{num2}")
 def adder(num1: int, num2: int):
     """Add two numbers together"""
 
